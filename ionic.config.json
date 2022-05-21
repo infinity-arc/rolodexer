@@ -1,0 +1,7 @@
+{
+  "name": "Rolodexer",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
