@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"material-icon-theme.activeIconPack": "angular",
+		"html.format.wrapAttributes": "force-aligned",
+	}
+}
