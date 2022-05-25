@@ -34,6 +34,8 @@ export class Tab2Page {
 	doReorder(event: any) {
 		event.detail.complete(this.cards);
 		this._dataService.reorder(this.cards);
+		console.log(this.cards);
+		this._ref.detectChanges();
 	}
 
 }

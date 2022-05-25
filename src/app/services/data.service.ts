@@ -43,5 +43,8 @@ export class DataService {
 
 	reorder(reorderedCards: ICard[]){
 		this._cards.index = reorderedCards.map(card => card.id);
+		this._cards.cards = reorderedCards;
+		console.log(this._cards.index);
+
 	}
 }
