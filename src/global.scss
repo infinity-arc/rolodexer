@@ -29,5 +29,14 @@
 
 .app-logo-text {
 	font-family: Iceland;
-	font-size: 2em;
+	font-size: 1.2em;
 }
+
+// global.scss
+@import '~swiper/scss';
+@import '~swiper/scss/autoplay';
+@import '~swiper/scss/keyboard';
+@import '~swiper/scss/pagination';
+@import '~swiper/scss/scrollbar';
+@import '~swiper/scss/zoom';
+@import '~@ionic/angular/css/ionic-swiper';

@@ -9,6 +9,8 @@ import { finalize, take } from 'rxjs/operators'
 })
 export class DataService {
 
+	private _cards: any;
+
 	constructor(private http: HttpClient) {
 
 	}
@@ -19,11 +21,27 @@ export class DataService {
 			.subscribe(
 				{
 					next: (payload: any) => {
-						callback(null, payload);
+						console.log(payload);
+						if(!this._cards) {
+							this._cards = payload
+						}
+						callback(null, this.cards);
 					},
 					error: (error: unknown) => {
+						console.log(error);
 						callback(error, null)
 					}
 				});
+	}
+
+	get cards() {
+		return this._cards.index.map(id=>{
+			return this._cards.cards.find(card => card.id === id);
+		});
+	}
+
+
+	reorder(reorderedCards: ICard[]){
+		this._cards.index = reorderedCards.map(card => card.id);
 	}
 }

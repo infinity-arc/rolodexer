@@ -1,3 +1,4 @@
+import { SwiperModule } from 'swiper/angular';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
@@ -8,12 +9,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
+import { AddEditFormComponent } from './components/add-edit-form/add-edit-form.component'
 
 @NgModule({
-	declarations: [AppComponent],
+	declarations: [AppComponent, AddEditFormComponent],
 	entryComponents: [],
 	imports: [
+		SwiperModule,
 		HttpClientModule,
 		BrowserModule,
 		IonicModule.forRoot({

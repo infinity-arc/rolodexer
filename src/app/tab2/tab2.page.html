@@ -1,21 +1,61 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 2
-    </ion-title>
-  </ion-toolbar>
+    <ion-toolbar>
+        <ion-title>Tab 2</ion-title>
+    </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
-    </ion-toolbar>
-  </ion-header>
+    <ion-header collapse="condense">
+        <ion-toolbar>
+            <ion-title size="large">Tab 2</ion-title>
+        </ion-toolbar>
+    </ion-header>
 
-  <ion-list>
-	  <ion-list-header>
-		  Index Cards
-	  </ion-list-header>
-  </ion-list>
+    <ion-list>
+        <ion-list-header lines="full" class="ion-justify-between">
+            <ion-text style="flex: 1">Card Index</ion-text>
+            <ion-badge style="margin-right: 10px">Cards: {{cardsCount}}</ion-badge>
+        </ion-list-header>
+
+        <!-- <ion-item-divider></ion-item-divider> -->
+
+        <ion-reorder-group
+            (ionItemReorder)="doReorder($event)"
+            disabled="false"
+        >
+            <ng-container *ngFor="let card of cards">
+                <ion-item-sliding>
+
+                    <ion-item lines="full">
+                        <ion-reorder slot="start"></ion-reorder>
+                        <ion-label slot="start">{{card.title}}</ion-label>
+                    </ion-item>
+
+                    <ion-item-options slot="end">
+
+                        <ion-item-option color="default">
+
+                            <ion-buttons>
+                                <ion-button
+                                    fill="solid"
+                                    color="success"
+                                >
+                                    <ion-icon name="create-outline"></ion-icon>
+                                </ion-button>
+                                <ion-button
+                                    fill="solid"
+                                    color="danger"
+                                >
+                                    <ion-icon name="close-outline"></ion-icon>
+                                </ion-button>
+                            </ion-buttons>
+
+                        </ion-item-option>
+
+                    </ion-item-options>
+
+                </ion-item-sliding>
+            </ng-container>
+        </ion-reorder-group>
+    </ion-list>
 </ion-content>

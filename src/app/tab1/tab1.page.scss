@@ -1,3 +1,37 @@
 // home.page.scss
-@import '~swiper/scss';
-@import '~@ionic/angular/css/ionic-swiper';
+@import "~swiper/scss";
+@import "~@ionic/angular/css/ionic-swiper";
+
+ion-card {
+	min-height: 74vh;
+	max-height: 74vh;
+	display: flex;
+	flex-direction: column;
+
+}
+
+ion-card-content {
+	flex: 1;
+	display: block;
+	height: auto;
+	overflow: scroll;
+
+}
+
+ion-buttons.card-controls {
+	justify-content: space-between;
+	margin-inline: 10px;
+	ion-button {
+		ion-icon {
+
+		}
+	}
+}
+
+
+ion-button:disabled {
+	// opacity: 0 !important;
+	ion-icon {
+		opacity: 0 !important;
+	}
+}

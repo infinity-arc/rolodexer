@@ -1,7 +1,11 @@
 {
 	"name": "rolodexer",
-	"version": "0.0.1",
-	"author": "Ionic Framework",
+	"version": "0.0.1-alpha 1",
+	"author": {
+		"email": "webmaster@infinityarc.net",
+		"name": "Cliff Crerar",
+		"url": "https://www.cliffcrerar.tech"
+	},
 	"homepage": "https://ionicframework.com/",
 	"bin": "node_modules/.bin",
 	"scripts": {
